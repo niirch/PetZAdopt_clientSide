@@ -48,20 +48,7 @@ const Login = () => {
       setLoading(false);
     }
   };
-  const hanldeGithub = async () => {
-    try {
-      const result = await singInWithGithub();
-      await saveUser(result?.user);
-      console.log(result);
-
-      navigate(from, { replace: true });
-      toast.success("Signup Successful");
-    } catch (err) {
-      console.log(err);
-      toast.error(err.message);
-      setLoading(false);
-    }
-  };
+ 
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
@@ -148,5 +135,5 @@ const Login = () => {
     </div>
   );
 };
-
+//export defaut
 export default Login;
